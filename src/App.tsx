@@ -1,19 +1,21 @@
-import React from "react";
-import { useSelector } from "react-redux";
-
 import "./App.css";
-import { useAppDispatch, useAppSelector } from "./hooks/redux";
-import { userSlice } from "./store/reducers/UserSlice";
+import { PostContainer } from "./components/PostContainer";
+import { PostContainer2 } from "./components/PostContainer2";
 
 function App() {
-  // const { count } = useAppSelector((state) => state.userReducer);
-  // const { increment } = userSlice.actions;
-  // const dispatch = useAppDispatch();
+  /*const dispatch = useAppDispatch();
+  const { users, isLoading, error } = useAppSelector((state) => state.user);
+
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, []);*/
+
   return (
     <div className="App">
-      {/* <h1>{count}</h1>
-      <button onClick={() => dispatch(increment(10))}>increment</button> */}
-      <button>decrement</button>
+      <div style={{ display: "flex" }}>
+        <PostContainer />
+        <PostContainer2 />
+      </div>
     </div>
   );
 }
